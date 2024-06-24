@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen_component": "bash shell/generated_component.sh"
   },
   "dependencies": {
     "react": "^18",
