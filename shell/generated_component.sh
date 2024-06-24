@@ -140,13 +140,13 @@ main() {
     local barrel_path=""
     if [ "$layer" == "shared" ]; then
         barrel_path="src/components/$layer/index.ts"
-        update_barrel_file "$barrel_path" "export * from './$component';"
+        update_barrel_file "$barrel_path" "export { default as $component } from './$component';"
         if $generate_type; then
             update_barrel_file "$barrel_path" "export type * from './$component';"
         fi
     else
         barrel_path="src/components/$layer/$slice/index.ts"
-        update_barrel_file "$barrel_path" "export * from './$component';"
+        update_barrel_file "$barrel_path" "export { default as $component } from './$component';"
         if $generate_type; then
             update_barrel_file "$barrel_path" "export type * from './$component';"
         fi
