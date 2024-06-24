@@ -18,11 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <RootStyleRegistry>
-      <Theme>
-        <html lang="kr">
-          <body className={inter.className}>{children}</body>
-        </html>
-      </Theme>
+      <html lang="kr">
+        <body className={inter.className}>
+          <Theme>{children}</Theme>
+        </body>
+      </html>
     </RootStyleRegistry>
   );
 }
